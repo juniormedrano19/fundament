@@ -1,7 +1,9 @@
 const express= require('express');
 let os = require('os')
 const app=express();
-const port=process.env.PORT || 3000;
+const port=process.env.PORT || 3000; //VARIABLE DE ENTORNO
+
+console.log(os.networkInterfaces());
 
 //motor de plantillas
 app.set('view engine','ejs');
