@@ -1,6 +1,15 @@
 const express= require('express');
-let os = require('os')
+const bodyParser = require ('body-parser');
+let os = require('os');
 const app=express();
+
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false })) //Método POST
+// parse application/json
+app.use(bodyParser.json())
+
+
 
 require('dotenv').config();
 
